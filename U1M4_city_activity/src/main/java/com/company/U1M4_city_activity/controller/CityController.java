@@ -67,7 +67,7 @@ public class CityController {
     Request body: none
     Response body: City
      */
-    @RequestMapping(value = "/city", method = RequestMethod.GET)
+    @RequestMapping(value = "/city/{name}", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
     public City retrieveCity (@PathVariable @Valid String name){
         if (name == null) {
